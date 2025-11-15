@@ -1,0 +1,117 @@
+
+:root {
+    --cor00: #fff;
+    --cor01: black;
+    --cor02: rgb(70, 19, 80);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    max-height: 120px;
+    min-height: 80px;
+    text-transform: uppercase;
+}
+
+header p {
+    margin: 10px 20px;
+    font-size: 1.2em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2vw;
+    height: 10vh;
+    user-select: none;
+}
+
+nav h1 {
+    display: flex;
+    font-size: 2.3em;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor02);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 1.5em;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline var(--cor02);
+}
+
+#hamburger {
+    display: none;
+    padding-block: 10px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+#hamburger div {
+    background-color: var(--cor02);
+    width: 32px;
+    height: 4px;
+    margin: 9px;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    #hamburger {
+        display: block;
+        pointer-events: all;
+    }
+    ul#nav-list {
+        position: absolute;
+        bottom: 0vh;
+        left: 0vw;
+        height: 90vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: var(--cor02);
+        transform: translateX(100%);
+        transition: 0.5s;
+    }
+    ul#nav-list.ativado {
+        transform: translateX(0%);
+        transition: 0.5s;
+    }
+    ul li a:hover {
+        color: var(--cor00);
+        font-weight: bolder;
+    }
+    #barra1.ativado {
+        transform: translateY(13px) rotateZ(45deg);
+        transition: 0.3s;
+    }
+    #barra2.ativado {
+        opacity: 0;
+        transition: 0.3s;
+    }
+    #barra3.ativado {
+        transform: translateY(-13px) rotateZ(-45deg);
+        transition: 0.3s;
+    }
+}
