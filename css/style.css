@@ -1,10 +1,9 @@
-
 :root {
     --cor00: #fff;
     --cor01: black;
     --cor02: rgb(70, 19, 80);
     --cor03: rgb(125, 26, 144);
-
+    --cor04: rgb(80, 80, 80);
 }
 
 * {
@@ -20,6 +19,7 @@ header {
 
 header p {
     margin: 10px 20px;
+    font: var();
 }
 
 nav {
@@ -74,6 +74,47 @@ nav ul li a:hover {
     margin: 9px;
     justify-content: space-between;
     border-radius: 10px;
+}
+
+main {
+    width: 75%;
+    padding: 20px;
+    word-wrap: break-word;
+}
+
+main h1{
+    color: var(--cor02);
+    text-transform: uppercase;
+}
+
+div#subtitulo {
+    color: var(--cor04);
+}
+
+main img {
+    width: 55%;
+    float: left;
+    margin-inline-end: 20px;
+    margin-block-end: 20px;
+}
+
+main p {
+    font-size: 1.4em;
+    text-indent: 30px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+aside {
+    width: 30%;
+    height: 100%;
+    right: 0;
+    border-left: 1px solid var(--cor01);
+}
+
+aside img {
+    width: 200px;
 }
 
 @media (max-width: 999px) {
