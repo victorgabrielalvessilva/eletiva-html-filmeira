@@ -1,9 +1,22 @@
+@font-face {
+    font-family: 'Abhaya Libre';
+    src: url(../mídia/fonte/AbhayaLibre-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans Regular';
+    src: url(../mídia/fonte/PlusJakartaSans[wght].woff);
+    }
+
 :root {
     --cor00: #fff;
     --cor01: black;
     --cor02: rgb(70, 19, 80);
     --cor03: rgb(125, 26, 144);
     --cor04: rgb(80, 80, 80);
+
+    --font01: 'Abhaya Libre';
+    --font02: 'Plus Jakarta Sans Regular';
 }
 
 * {
@@ -15,13 +28,13 @@
 /*Cabeçario*/
 
 header {
-    height: 20%;
     text-transform: uppercase;
+    background-color: var(--cor00);
 }
 
 header p {
     margin: 10px 20px;
-    font: var();
+    font: var(--font02);
 }
 
 nav {
@@ -54,6 +67,7 @@ nav ul li {
 
 nav ul li a {
     color: black;
+    font-family: var(--font02);
 }
 
 a:hover {
@@ -93,10 +107,12 @@ main {
 body h1, body a {
     color: var(--cor02);
     text-transform: uppercase;
+    font-family: var(--font01);
 }
 
 div#subtitulo {
     color: var(--cor04);
+    font-family: var(--font02);
 }
 
 main img {
@@ -112,6 +128,7 @@ main p {
     margin-bottom: 5px;
     word-wrap: break-word;
     text-align: justify;
+    font-family: var(--font02);
 }
 
 aside {
@@ -146,6 +163,9 @@ main#sobre h1, main#sobre p{
 @media (max-width: 999px) {
     body {
         overflow-x: hidden;
+    }
+    body.ativado {
+        overflow: hidden;
     }
     #hamburger {
         display: block;
