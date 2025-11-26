@@ -12,6 +12,8 @@
     text-decoration: none;
 }
 
+/*Cabeçario*/
+
 header {
     height: 20%;
     text-transform: uppercase;
@@ -59,6 +61,8 @@ a:hover {
     transition: 0.3s;
 }
 
+/* menu hamburger*/
+
 #hamburger {
     display: none;
     padding-block: 10px;
@@ -86,7 +90,7 @@ main {
     border-right: 2px solid grey;
 }
 
-div#container h1, a{
+body h1, body a {
     color: var(--cor02);
     text-transform: uppercase;
 }
@@ -112,7 +116,7 @@ main p {
 
 aside {
     width: 30%;
-    padding: 30px;
+    padding: 20px;
     align-items: center;
 }
 
@@ -127,6 +131,17 @@ aside h1 {
 aside div#noticias {
     width: 30%;
 }
+
+main#sobre {
+    border-right: 0px solid white;
+    margin: auto;
+}
+
+main#sobre h1, main#sobre p{
+    text-align: center;
+}
+
+/* quando a janela estiver menor q 999px, vai ativar essas mudanças, vai spawnar o menu hamburger (q estava invisivel e inacessivel), tbm vai fazer algumas coisas de responsividade   */ 
 
 @media (max-width: 999px) {
     body {
@@ -167,5 +182,20 @@ aside div#noticias {
     #barra3.ativado {
         transform: translateY(-13px) rotateZ(-45deg);
         transition: 0.3s;
+    }
+    div#container {
+        display: block;
+    }
+    main {
+        width: 95%;
+        padding: 10px;
+        border-right: 0px solid #fff;
+    }
+    main img {
+        float: none;
+    }
+    aside {
+        width: 95vw;
+        border-top: 1px solid black;
     }
 }
