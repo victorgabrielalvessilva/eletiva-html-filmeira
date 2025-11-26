@@ -98,7 +98,7 @@ div#container {
 }
 
 main {
-    width: 80%;
+    width: 90%;
     padding: 20px;
     word-wrap: break-word;
     border-right: 2px solid grey;
@@ -132,7 +132,7 @@ main p {
 }
 
 aside {
-    width: 30%;
+    width: 20%;
     padding: 20px;
     align-items: center;
 }
@@ -190,6 +190,7 @@ main#sobre h1, main#sobre p{
     ul li a:hover {
         color: var(--cor00);
         transition: 0.3s;
+        text-decoration: none;
     }
     #barra1.ativado {
         transform: translateY(13px) rotateZ(45deg);
@@ -211,8 +212,12 @@ main#sobre h1, main#sobre p{
         padding: 10px;
         border-right: 0px solid #fff;
     }
+    main h1 {
+        font-size: 1.7em;
+    }
     main img {
         float: none;
+        width: 100%;
     }
     aside {
         width: 95vw;
