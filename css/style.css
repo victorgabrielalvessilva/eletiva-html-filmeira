@@ -23,6 +23,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: var(--font02);
 }
 
 /*Cabeçario*/
@@ -145,8 +146,9 @@ aside h1 {
     margin-bottom: 20px;
 }
 
-aside div#noticias {
-    width: 30%;
+aside div.noticia {
+    margin-block: 30px;
+
 }
 
 main#sobre {
